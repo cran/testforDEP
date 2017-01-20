@@ -7,7 +7,7 @@ setClass("PEARSON",
 
 setValidity("PEARSON", function(object){
   if(object@p.opt == "table")
-    stop('No "table" option for PEARSON, please use "MC" or "table".')
+    stop('No "table" option for PEARSON, please use "MC" or "dist".')
 })
 
 

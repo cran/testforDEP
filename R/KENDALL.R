@@ -7,7 +7,7 @@ setClass("KENDALL",
 
 setValidity("KENDALL", function(object){
   if(object@p.opt == "table")
-    stop('No "table" option for KENDALL, please use "MC" or "table".')
+    stop('No "table" option for KENDALL, please use "MC" or "dist".')
 })
 
 

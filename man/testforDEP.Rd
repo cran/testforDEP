@@ -14,7 +14,7 @@ testforDEP(x = NA, y = NA, data = NA, test, p.opt = "MC",
 
 \item{data}{(Optional) a data frame stores data to be tested.}
 
-\item{test}{a character indicating which test to implement.. Must be one of \{"PEARSON", "KENDALL", "SPEARMAN", "VEXLER", "TS2", "V", "MIC", "HOEFFD", "CANOVA", "EL"\}}
+\item{test}{a character indicating which test to implement.. Must be one of \{"PEARSON", "KENDALL", "SPEARMAN", "VEXLER", "TS2", "V", "MIC", "HOEFFD", "EL"\}}
 
 \item{p.opt}{a character specifying p value to be obtained by distribution or by Monte Carlo simulation. Must be "dist", "MC" or "table".}
 
@@ -30,17 +30,17 @@ testforDEP(x = NA, y = NA, data = NA, test, p.opt = "MC",
 an S4 object of class "testforDEP_result", having attributes: test statistics (TS), p value (p_value) and confidence interval (CI) if apply.
 }
 \description{
-This function computes test statistic, p value, and confidence interval for dependence based on classic methods: Pearson, Kendall, Spearman, and modern methods: Vexler, Kallenberg, MIC, Hoeffding, CANOVA and Empirical Likelihood tests.
+This function computes test statistic, p value, and confidence interval for dependence based on classic methods: Pearson, Kendall, Spearman, and modern methods: Vexler, Kallenberg, MIC, Hoeffding, and Empirical Likelihood tests.
 }
 \details{
 Argument "x, y" and "data" are two different ways to input data. When x or y is missing, data will be taken as input; while x, y and data all exist leads to error.
 Argument data is a two-column numeric data frame. The order of columns does not affect results.
-Since modern test methods: "VEXLER", "TS2", "V", "MIC", "HOEFFD", "CANOVA" and "EL" have no continuous probability density function, argument p.opt = "dist" does not apply. For classic methods, when p.opt is "dist", argument num.MC will be ignored.
+Since modern test methods: "VEXLER", "TS2", "V", "MIC", "HOEFFD", and "EL" have no continuous probability density function, argument p.opt = "dist" does not apply. For classic methods, when p.opt is "dist", argument num.MC will be ignored.
 p.opt = "table" use interpolation from pre stored simulated tables. Current version only supports "VEXLER", "MIC", "HOEFFD" and "EL" tests.
 For Vexler, MIC and EL, since computation is more time-consuming, a warning with estimated execution time will be returned when input size > 100. Input size <= 100 is recommanded for Monte Carlo p-value. For input size > 100 use table.
 num.MC should be a integer between 100 and 10,000 for acceptable computation times.
-NA in input is no acceptable. Set rm.na = TRUE to remove.
-More details see \link{Pearson}, \link{Kendall}, \link{Spearman}, \link{Vexler}, \link{Kallenberg}, \link{MIC}, \link{Hoeffding}, \link{CANOVA}, \link{EL}.
+NA in input is not acceptable. Set rm.na = TRUE to remove.
+More details see \link{Pearson}, \link{Kendall}, \link{Spearman}, \link{Vexler}, \link{Kallenberg}, \link{MIC}, \link{Hoeffding}, \link{EL}.
 }
 \examples{
 set.seed(123)
@@ -67,6 +67,6 @@ Jeffrey C. Miecznikowski, En-shuo Hsu, Yanhua Chen, Albert Vexler
 }
 \seealso{
 Technical report:
-http://sphhp.buffalo.edu/content/dam/sphhp/biostatistics/Documents/techreports/UB-Biostatistics-TR1601.pdf
+http://sphhp.buffalo.edu/content/dam/sphhp/biostatistics/Documents/techreports/UB-Biostatistics-TR1701.pdf
 }
 

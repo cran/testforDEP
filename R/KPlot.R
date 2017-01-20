@@ -2,7 +2,7 @@
 #' @description This function draws Kendall plot of 2 variables. Also provides an index AUK (area under Kendall plot).
 #'
 #' @param x a numeric vector stores first variable.
-#' @param y numeric vector stores second variable.
+#' @param y a numeric vector stores second variable.
 #' @param plot a TRUE/ FALSE flag for generating Kendall plot or not.
 #' @param main a character indicating the title of the plot.
 #' @param Auxiliary.line a TRUE/ FALSE flag for drawing auxiliary lines or not.

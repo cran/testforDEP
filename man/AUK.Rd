@@ -10,7 +10,7 @@ AUK(x, y, plot = F, main = "Kendall plot", Auxiliary.line = T,
 \arguments{
 \item{x}{a numeric vector stores first variable.}
 
-\item{y}{numeric vector stores second variable.}
+\item{y}{a numeric vector stores second variable.}
 
 \item{plot}{a TRUE/ FALSE flag for generating Kendall plot or not.}
 

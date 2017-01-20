@@ -5,47 +5,6 @@
 
 using namespace Rcpp;
 
-// W_ties
-double W_ties(NumericVector x, NumericVector y, int k);
-RcppExport SEXP testforDEP_W_ties(SEXP xSEXP, SEXP ySEXP, SEXP kSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
-    Rcpp::traits::input_parameter< int >::type k(kSEXP);
-    rcpp_result_gen = Rcpp::wrap(W_ties(x, y, k));
-    return rcpp_result_gen;
-END_RCPP
-}
-// W_no_ties
-double W_no_ties(NumericVector x, NumericVector y, int k);
-RcppExport SEXP testforDEP_W_no_ties(SEXP xSEXP, SEXP ySEXP, SEXP kSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
-    Rcpp::traits::input_parameter< int >::type k(kSEXP);
-    rcpp_result_gen = Rcpp::wrap(W_no_ties(x, y, k));
-    return rcpp_result_gen;
-END_RCPP
-}
-// MC_p
-double MC_p(NumericVector x, NumericVector y, double W, int sn, int k);
-RcppExport SEXP testforDEP_MC_p(SEXP xSEXP, SEXP ySEXP, SEXP WSEXP, SEXP snSEXP, SEXP kSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
-    Rcpp::traits::input_parameter< double >::type W(WSEXP);
-    Rcpp::traits::input_parameter< int >::type sn(snSEXP);
-    Rcpp::traits::input_parameter< int >::type k(kSEXP);
-    rcpp_result_gen = Rcpp::wrap(MC_p(x, y, W, sn, k));
-    return rcpp_result_gen;
-END_RCPP
-}
 // Tn
 double Tn(NumericVector& x, NumericVector& y);
 RcppExport SEXP testforDEP_Tn(SEXP xSEXP, SEXP ySEXP) {
